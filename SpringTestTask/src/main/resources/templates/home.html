@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Spring Test Task</title>
+	<link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+	<form method="POST" th:object="${imagefile}">
+		<div class="wrapper">
+			<input type="radio" name="name" value="apple" id="appleChoice" th:field="*{name}">
+			<label for="appleChoice">Apple</label>
+
+			<input type="radio" name="name" value="orange" id="orangeChoice" th:field="*{name}">
+			<label for="orangeChoice">Orange</label>
+
+			<input type="radio" name="name" value="cherry" id="cherryChoice" th:field="*{name}">
+			<label for="cherryChoice">Cherry</label>
+		</div>
+		<div>
+			<button type="submit">Submit</button>
+		</div>
+		<div>
+			<img th:src="@{${filename}}">
+		</div>
+	</form>
+</body>
+
+</html>
