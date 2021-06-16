@@ -1,4 +1,4 @@
-package ru.smolina;
+package ru.smolina.domain;
 
 import lombok.Data;
 

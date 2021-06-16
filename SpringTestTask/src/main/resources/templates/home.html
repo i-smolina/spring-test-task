@@ -10,20 +10,26 @@
 <body>
 	<form method="POST" th:object="${imagefile}">
 		<div class="wrapper">
-			<input type="radio" name="name" value="apple" id="appleChoice" th:field="*{name}">
-			<label for="appleChoice">Apple</label>
+			<input type="radio" name="name" value="lemon" id="lemonChoice" th:field="*{name}">
+			<label for="lemonChoice">Lemon</label>
 
 			<input type="radio" name="name" value="orange" id="orangeChoice" th:field="*{name}">
 			<label for="orangeChoice">Orange</label>
 
 			<input type="radio" name="name" value="cherry" id="cherryChoice" th:field="*{name}">
 			<label for="cherryChoice">Cherry</label>
+
+			<input type="radio" name="name" value="pineapple" id="pineAppleChoice" th:field="*{name}">
+			<label for="pineAplleChoice">Pineapple</label>
+
+			<input type="radio" name="name" value="banana" id="bananaChoice" th:filed="*{name}">
+			<label for="bananaChoice">Banana</label>
 		</div>
 		<div>
 			<button type="submit">Submit</button>
 		</div>
 		<div>
-			<img th:src="@{${filename}}">
+			<img th:src="@{'data:image/png;base64,'+${image}}">
 		</div>
 	</form>
 </body>
